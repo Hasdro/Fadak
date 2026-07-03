@@ -14,7 +14,7 @@ def main(context):
     
     req_body = context.req.body
     # {"hasan": "true", "amount": "1", "item": "e", "arash": "true", "mehdi": "true", "payer": "Arash"}
-    amount = req_body.get("amount")
+    amount = int(req_body.get("amount")) * 1000
     item = req_body.get("item")
     payer = req_body.get("payer")
     arash = req_body.get("arash")
