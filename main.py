@@ -64,11 +64,10 @@ def main(context):
         if "updates" in gs_res:
             row_ref = gs_res["updates"]["updatedRange"].split("!")[-1].split(":")[-1].replace("A", "").replace("K", "")
             names_and_emojis = {"Farhood": " 🦁Farhood", "Mehdi" : " 🎬Mehdi", "Arash" : " 🦉Arash", "Hasan" : " 😴Hasan"}
-            payer = names_and_emojis.get(answer.get('payer'))
+            payer = names_and_emojis.get(payer)
             final_output_text = (
                 f"❇️ Recorded!{br}Input: \"{text}\"{br}{br}"
-                f"💸 Amount: {answer.get('amount')}{br}"
-                f"ℹ️ Category: {answer.get('itemsCategory')}{br}"
+                f"💸 Amount: {amount}{br}"
                 f"😎 Payer: {payer}{br}"
                 f"🧮 Splitters:"
             )
@@ -78,7 +77,7 @@ def main(context):
             
             final_output_text += f"{br}➡️Row Number: {row_ref}{br}📅Date: {the_date}"
         else:
-            final_output_text = f"Error: Sheet update failed.{br}Data: {json.dumps(answer)}"
+            final_output_text = f"Error: Sheet update failed.{br}Data: {req_body}"
 
     except Exception as e:
         final_output_text = f"System Error: {str(e)}"
