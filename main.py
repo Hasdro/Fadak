@@ -66,7 +66,7 @@ def main(context):
             names_and_emojis = {"Farhood": " 🦁Farhood", "Mehdi" : " 🎬Mehdi", "Arash" : " 🦉Arash", "Hasan" : " 😴Hasan"}
             payer = names_and_emojis.get(payer)
             final_output_text = (
-                f"❇️ Recorded!{br}Input: \"{text}\"{br}{br}"
+                f"❇️ Recorded!{br}Input: \"{item}\"{br}{br}"
                 f"💸 Amount: {amount}{br}"
                 f"😎 Payer: {payer}{br}"
                 f"🧮 Splitters:"
