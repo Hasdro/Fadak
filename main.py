@@ -86,6 +86,7 @@ def main(context):
     tg_url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
     for uid in all_chat_ids:
         # requests.post(tg_url, json={"chat_id": uid, "text": final_output_text})
+        pass
 
     
     
