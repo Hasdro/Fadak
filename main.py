@@ -84,12 +84,10 @@ def main(context):
 
     tg_url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
     for uid in all_chat_ids:
-        # requests.post(tg_url, json={"chat_id": uid, "text": final_output_text})
-        pass
+        requests.post(tg_url, json={"chat_id": uid, "text": final_output_text})
+        
 
     
     
-    requests.post(tg_url, json={"chat_id": hasan_chat_id, "text": req_body})
-    requests.post(tg_url, json={"chat_id": hasan_chat_id, "text": final_output_text})
     
     return context.res.json({"status": "ok"})
