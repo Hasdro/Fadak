@@ -71,9 +71,9 @@ def main(context):
                 f"😎 Payer: {payer}{br}"
                 f"🧮 Splitters:"
             )
-            if mehdi: final_output_text += " 🎬Mehdi"
-            if arash: final_output_text += " 🦉Arash"
-            if hasan: final_output_text += " 😴Hasan"
+            if mehdi == "true": final_output_text += " 🎬Mehdi"
+            if arash == "true": final_output_text += " 🦉Arash"
+            if hasan == "true": final_output_text += " 😴Hasan"
             
             final_output_text += f"{br}➡️Row Number: {row_ref}{br}📅Date: {the_date}"
         else:
